@@ -13,6 +13,21 @@ nhl_data_hub/macros/dp_create_external_table_game_scratches.sql
 nhl_data_hub/macros/dp_create_external_table_game_teams_stats_v2.sql
 nhl_data_hub/macros/dp_create_external_table_games.sql
 
+nhl_data_hub/seeds/game.csv
+nhl_data_hub/seeds/game_goalie_stats.csv
+nhl_data_hub/seeds/game_goals.csv
+nhl_data_hub/seeds/game_officials.csv
+nhl_data_hub/seeds/game_penalties.csv
+nhl_data_hub/seeds/game_plays.csv
+nhl_data_hub/seeds/game_plays_original.csv
+nhl_data_hub/seeds/game_plays_players.csv
+nhl_data_hub/seeds/game_scratches.csv
+nhl_data_hub/seeds/game_shifts.csv
+nhl_data_hub/seeds/game_skater_stats.csv
+nhl_data_hub/seeds/game_teams_stats.csv
+nhl_data_hub/seeds/game_teams_stats_original.csv
+
+
 scripts/bin/__pycache__
 scripts/bin/clean_flat_file.ipynb
 scripts/bin/upload_gcp.ipynb

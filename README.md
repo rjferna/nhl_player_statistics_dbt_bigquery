@@ -20,7 +20,9 @@ This goal of this repository is to analyze  NHL Player Statistics using DBT to t
 # DBT
 
 ## **Macros**
-Currently, this directory contains macros to create external tables in BigQuery.
+Currently, this directory contains macros to create external tables in BigQuery. I was looking at how I can build external tables by first uploading the files 
+located into a GCS Storage bucket and then running a script that would iterate through each file to build the external table using DBT commands.
+
 
 
 | File                                          | Description                                                                                             |
@@ -98,5 +100,15 @@ dbt run --select ref_skater_details.sql
 ```
 
 
+## **Seeds**
+We can also use the built in DBT functionality to load data from static flat files in the seed directory.
 
+1. 
+```
+dbt seed --select player_info
+```
 
+2. 
+```
+dbt seed --select team_info
+```
