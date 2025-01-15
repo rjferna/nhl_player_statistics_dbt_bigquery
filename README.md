@@ -53,6 +53,8 @@ dbt run-operation create_external_table_game_goalie
 python3 gcp_external_table_automated.py
 ```
 
+
+
 ## **Models**
 In this directory you will find the four sub-directories reference, staging, stg_views and ref_views. The **staging** directory holds scripts where we read in data from **external** 
 tables and cast every attribute a datatype format and, create a staging base table. The **stg_views** directory holds scripts where we apply further transformations
@@ -60,6 +62,8 @@ tables and cast every attribute a datatype format and, create a staging base tab
 on top of **reference** tables.
 
 To build the Staging and Reference tables you need to execute the scripts in sequence **External > Staging > Staging Views > Reference > Reverence Views**.
+
+
 
 **Order for Player Info**
 1. Staging:   
@@ -77,6 +81,8 @@ dbt run --select vw_stg_player_info.sql
 dbt run --select ref_player_info.sql 
 ```
 
+
+
 **Order for Player Info**
 1. Staging:   
 ``` 
@@ -93,11 +99,15 @@ dbt run --select vw_stg_game_skater_stats.sql
 dbt run --select ref_game_skater_stats.sql 
 ```
 
+
+
 **Player Info & Game Skater Stats Required to build Skater Details**
+
 4. Reference: 
 ``` 
 dbt run --select ref_skater_details.sql 
 ```
+
 
 
 ## **Seeds**
@@ -111,4 +121,13 @@ dbt seed --select player_info
 2. 
 ```
 dbt seed --select team_info
+```
+
+
+## **Snapshots**
+Create a managed snapshot table for USA skaters over 40 years of age.
+
+
+```
+dbt snapshot --select skater_details_snapshots
 ```
