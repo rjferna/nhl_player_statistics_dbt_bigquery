@@ -1,0 +1,8 @@
+{
+"gcp_bucket_name": "<path>",
+"gcp_credentials": "<path>",
+"gcp_destination_path": "<path>",
+"local_source_path": "<path>",
+"dbt_proj_path": "<path>",
+"logging_path": "<path>"
+}

@@ -1,0 +1,85 @@
+
+version: 2
+
+models:
+  - name: stg_games
+    description: "A starter dbt model"
+    columns:
+      - name: game_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: season
+        description: "The season the game was played"
+      - name: type
+        description: "Game Type"
+      - name: date_time_GMT
+        description: "Game Date and Time in GMT"
+      - name: away_team_id
+        description: "Away Team Unique id"
+      - name: home_team_id
+        description: "Home team unique id"
+      - name: away_goals
+        description: "Away team goals scored in game"
+      - name: home_goals
+        description: "Home team goals scored in game"
+      - name: outcome
+        description: "Game outcome"
+      - name: home_rink_side_start
+        description: "Side start for team" 
+      - name: venue
+        description: "Name of the Venue"
+      - name: venue_link
+        description: "API Venue link"
+      - name: venue_time_zone_id
+        description: "Venue Time zone Id"
+      - name: venue_time_zone_offset
+        description: "Time zone offset for venue"
+      - name: venue_time_zone_tz
+        description: ""         
+      - name: dw_load_timestamp
+        description: "Load timestamp"
+  
+  - name: stg_game_teams_stats
+    description: "Teams Stats by Game"                  
+    columns:
+      - name: game_id
+        description: "" 
+        data_tests:
+          - not_null
+      - name: team_id
+        description: ""        
+      - name: HoA
+        description: ""
+      - name: Won
+        description: ""
+      - name: settled_in
+        description: ""
+      - name: head_coach
+        description: ""
+      - name: goals
+        description: ""
+      - name: shots
+        description: ""
+      - name: hits
+        description: ""
+      - name: pim
+        description: ""
+      - name: powerPlayOpportunities
+        description: ""
+      - name: powerPlayGoals
+        description: ""
+      - name: faceOffWinPercentage
+        description: ""
+      - name: giveaways
+        description: ""
+      - name: takeaways
+        description: ""
+      - name: blocked
+        description: ""                                                        
+      - name: startRinkSide
+        description: ""
+      - name: dw_load_timestamp
+        description: ""
+        
